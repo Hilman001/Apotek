@@ -5,6 +5,8 @@ import Marquee from "react-fast-marquee";
 import { TypeAnimation } from "react-type-animation";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
+
 
 export default function Portfolio() {
   const products = [
@@ -248,35 +250,35 @@ export default function Portfolio() {
       </section>
 
       <div className="w-full mt-10 flex gap-8 justify-center">
-        <a
-          href="https://www.instagram.com/apotekrahmifarma/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="py-3 px-6 rounded-2xl shadow-lg bg-pink-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-            <img src="/ig.png" alt="instagram" width={24} height={24} />
-            <p className="ml-3">Instagram</p>
-          </div>
-        </a>
+  <a
+    href="https://www.instagram.com/apotekrahmifarma/"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <div className="py-3 px-6 rounded-2xl shadow-lg bg-pink-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+      <FaInstagram size={24} />
+      <p className="ml-3">Instagram</p>
+    </div>
+  </a>
 
-        <a
-          href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <div className="py-3 px-6 rounded-2xl shadow-lg bg-white text-black flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-            <img src="/gmap.png" alt="google map" width={24} height={24} />
-            <p className="ml-3">Google Map</p>
-          </div>
-        </a>
+  <a
+    href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA"
+    target="_blank"
+    rel="noreferrer"
+  >
+    <div className="py-3 px-6 rounded-2xl shadow-lg bg-white text-black flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+      <FaMapMarkerAlt size={24} />
+      <p className="ml-3">Google Map</p>
+    </div>
+  </a>
 
-        <a href="https://wa.me/+6282279308219" target="_blank" rel="noreferrer">
-          <div className="py-3 px-6 rounded-2xl shadow-lg bg-green-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-            <img src="/wa.png" alt="whatsapp" width={24} height={24} />
-            <p className="ml-3">WhatsApp</p>
-          </div>
-        </a>
-      </div>
+  <a href="https://wa.me/+6282279308219" target="_blank" rel="noreferrer">
+    <div className="py-3 px-6 rounded-2xl shadow-lg bg-green-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+      <FaWhatsapp size={24} />
+      <p className="ml-3">WhatsApp</p>
+    </div>
+  </a>
+</div>
 
       {/* Links to About Us and Products or Services */}
       <div className="text-center mt-12">
