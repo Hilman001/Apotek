@@ -65,7 +65,7 @@ const products = [
   },
   {
     name: "Cataflam",
-    image: "/cataflam1.png",
+    image: "/Cataflam1.png",
     price: "Rp6.000/1 pcs",
     category: "Pain Relief",
   },

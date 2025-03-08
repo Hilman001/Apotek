@@ -108,7 +108,9 @@ export default function Portfolio() {
                   alt="Apotek Rahmi Farma"
                   width={300}
                   height={200}
+                  loading="lazy"
                   className="w-full object-cover rounded-md"
+                  
                 />
               </div>
               <div>
@@ -117,6 +119,7 @@ export default function Portfolio() {
                   alt="Apotek Rahmi Farma"
                   width={300}
                   height={200}
+                  loading="lazy"
                   className="w-full object-cover rounded-md"
                 />
               </div>
@@ -126,6 +129,7 @@ export default function Portfolio() {
                   alt="Apotek Rahmi Farma"
                   width={300}
                   height={200}
+                  loading="lazy"
                   className="w-full object-cover rounded-md"
                 />
               </div>
