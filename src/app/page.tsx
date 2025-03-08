@@ -259,7 +259,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <div className="w-full mt-10 flex gap-8 justify-center">
+      <div className="w-full mt-10 flex flex-col gap-8 justify-center items-center lg:flex-row lg:gap-12">
   <a
     href="https://www.instagram.com/apotekrahmifarma/"
     target="_blank"
@@ -289,6 +289,7 @@ export default function Portfolio() {
     </div>
   </a>
 </div>
+
 
       {/* Links to About Us and Products or Services */}
       <div className="text-center mt-12">
