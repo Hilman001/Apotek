@@ -7,7 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function Portfolio() {
-  const images = ["/rahmifarm.jpg", "/aptk.jpg", "/pharmacy.jpg", "/apt5.jpg"];
+  const images = [];
   const products = [
     {
       name: "Imboost Syrup",
@@ -63,163 +63,236 @@ export default function Portfolio() {
     },
     {
       name: "Cataflam",
-      image: "/cataflam1.png",
+      image: "/Cataflam1.png",
       price: "Rp20.000",
       discount: "10%",
     },
   ];
 
   return (
-    <div className="relative min-h-screen overflow-hidden text-gray-900">
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
+    <div className="relative min-h-screen overflow-hidden text-gray-900 bg-gradient-to-b from-blue-600 to-white">
+     
+      <div
+        className="relative w-full h-screen bg-cover bg-center"
+        style={{ backgroundImage: 'url("/banner1.jpg")' }}
       >
-        <source src="/obat.mp4" type="video/mp4" />
-      </video>
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-      <div className="relative container mx-auto px-4 py-8 mt-12">
-        <h1 className="text-4xl font-bold text-center mb-3 text-blue-400 animate-pulse drop-shadow-lg">
-          Apotek Rahmi Farma
-        </h1>
-        <p className="text-md text-center font-bold mb-6 text-blue-300 animate-pulse drop-shadow-md">
-          Tempat terbaik untuk kebutuhan kesehatan Anda dengan harga bersahabat dan layanan konsultasi apoteker! ✨
-        </p>
-
-        <main className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-          <div className="text-center md:text-left">
-            <TypeAnimation
-              sequence={[
-                "Selamat Datang Di Apotek kami",
-                1000,
-                "✨ Promo Spesial! ✨ ",
-                1000,
-                "Diskon hingga 50% untuk produk kesehatan pilihan!",
-                1000,
-                "Beli obat & vitamin, GRATIS konsultasi apoteker!",
-                1000,
-                "Pelayanan 24 Jam! Siap membantu kapan saja!",
-                1000,
-              ]}
-              wrapper="span"
-              speed={50}
-              style={{
-                fontSize: "1.5em",
-                display: "block",
-                color: "white",
-                textAlign: "center",
-                marginBottom: "16px",
-                textShadow: "2px 2px 5px rgba(0,0,0,0.5)",
-              }}
-              repeat={Infinity}
-            />
-            <h2 className="text-3xl font-bold mb-4 text-blue-300 drop-shadow-lg">
-              Kesehatan Anda Prioritas Kami!
-            </h2>
-            <p className="mb-4 text-md text-white">
-              Kami menyediakan produk kesehatan terbaik dengan harga terjangkau. Dapatkan promo menarik setiap bulan dan manfaatkan layanan konsultasi dengan apoteker profesional.
-            </p>
-            <a
-              href="product"
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition shadow-lg font-bold uppercase tracking-wide"
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="relative container mx-auto px-6 py-12 top-8 text-center text-blue-500">
+          <h1 className="text-5xl font-extrabold mb-4 animate-pulse drop-shadow-lg ">
+            Apotek Rahmi Farma
+          </h1>
+          <p className="text-lg font-semibold mb-6 animate-pulse drop-shadow-md">
+            Tempat terbaik untuk kebutuhan kesehatan Anda dengan harga
+            bersahabat dan layanan konsultasi apoteker!
+          </p>
+         
+          <div className="mt-10 max-w-[500px] mx-auto">
+            <Carousel
+              infiniteLoop
+              autoPlay
+              showThumbs={false}
+              showStatus={false}
+              interval={2000}
+              className="rounded-lg"
             >
-              Lihat Produk
-            </a>
-          </div>
-
-          <div className="relative">
-            <Carousel showThumbs={false} infiniteLoop autoPlay interval={3000} className="w-3/4 mx-auto">
-              {images.map((image, index) => (
-                <div key={index} className="flex justify-center">
-                  <Image
-                    src={image}
-                    alt={`Apotek ${index + 1}`}
-                    width={300}
-                    height={400}
-                    className="rounded-lg shadow-xl mx-auto border-4 border-blue-400 hover:border-blue-600 transition duration-300 transform hover:scale-105"
-                  />
-                </div>
-              ))}
-            </Carousel>
-          </div>
-        </main>
-
-        <div className="w-full mt-5 flex gap-7">
-              <a
-                href="https://www.instagram.com/apotekrahmifarma/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="ml-7 py-2 px-4 rounded-2xl shadow-md bg-pink-500 text-white flex items-center mb-5 hover:scale-110">
-                  <img src="/ig.png" alt="instagram" width={20} height={20} />
-                  <p className="ml-2 hidden ig-block">Instagram</p>
-                </div>
-              </a>
-
-              <a
-                href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA/@-1.4270028,102.3353129,17z/data=!3m1!4b1!4m6!3m5!1s0x2e2ebd007de5f7ef:0xc404921bfe76d276!8m2!3d-1.4270082!4d102.3378878!16s%2Fg%2F11w1kjq_gx?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="py-2 px-4 rounded-2xl shadow-md bg-white text-white flex items-center mb-5 hover:scale-110">
-                  <img src="/gmap.png" alt="discord" width={20} height={20} />
-                  <p className="ml-2 hidden ig-block">Google Map</p>
-                </div>
-              </a>
-              <a
-                href="https://wa.me/+6282279308219"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <div className="py-2 px-4 rounded-2xl shadow-md bg-white text-white flex items-center mb-5 hover:scale-110">
-                  <img src="/wa.png" alt="github" width={20} height={20} />
-                  <p className="ml-2 hidden ig-block">Discord</p>
-                </div>
-              </a>
-          
-             
-             
-            </div>
-
-        <section className="mt-10">
-          <h2 className="text-2xl font-bold text-center text-blue-400 mb-4 drop-shadow-md">
-            Produk Terlaris
-          </h2>
-          <Marquee gradient={false} speed={50} className="flex space-x-4">
-            {products.map((product, index) => (
-              <div
-                key={index}
-                className="bg-white p-4 rounded-lg shadow-md max-w-xs mx-2 border border-gray-200 hover:border-blue-400 hover:shadow-lg transition duration-300 transform hover:scale-105"
-              >
-                <div className="flex justify-center mb-3">
-                  <Image
-                    src={product.image}
-                    alt={`Produk ${index + 1}`}
-                    width={80}
-                    height={80}
-                    className="rounded-md hover:shadow-md hover:scale-110 transition duration-300"
-                  />
-                </div>
-                <h3 className="font-semibold text-center text-blue-600 mb-1 text-sm">
-                  {product.name}
-                </h3>
-                <p className="text-gray-700 text-xs">Diskon: {product.discount || "-"}</p>
-                <p className="mt-1 font-bold text-blue-600 text-sm">
-                  Harga: {product.price}
-                </p>
+              <div>
+                <Image
+                  src="/rahmifarm.jpg" 
+                  alt="Apotek Rahmi Farma"
+                  width={300}
+                  height={200}
+                  className="w-full object-cover rounded-md"
+                />
               </div>
-            ))}
-          </Marquee>
-        </section>
+              <div>
+                <Image
+                  src="/aptk.jpg" 
+                  alt="Apotek Rahmi Farma"
+                  width={300}
+                  height={200}
+                  className="w-full object-cover rounded-md"
+                />
+              </div>
+              <div>
+                <Image
+                  src="/pharmacy.jpg" 
+                  alt="Apotek Rahmi Farma"
+                  width={300}
+                  height={200}
+                  className="w-full object-cover rounded-md"
+                />
+              </div>
+            </Carousel>
 
-        <footer className="mt-8 text-center text-gray-300 py-3 rounded-lg bg-blue-900 shadow-inner">
-          <div className="container mx-auto">
-            <p>© {new Date().getFullYear()} Apotek Rahmi Farma. All rights reserved.</p>
+            <a
+            href="product"
+            className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-400 transition transform hover:scale-105 shadow-lg font-semibold uppercase tracking-wider mt-6 block"
+          >
+            Lihat Produk
+          </a>
           </div>
-        </footer>
+        </div>
+      </div>
+
+      <div className="mt-10 text-center">
+        <TypeAnimation
+          sequence={[
+            "Selamat Datang Di Apotek kami",
+            1000,
+            "✨ Promo Spesial! ✨ ",
+            1000,
+            "Diskon hingga 50% untuk produk kesehatan pilihan!",
+            1000,
+            "Beli obat & vitamin, GRATIS konsultasi apoteker!",
+            1000,
+            "Pelayanan 24 Jam! Siap membantu kapan saja!",
+            1000,
+          ]}
+          wrapper="span"
+          speed={50}
+          style={{
+            fontSize: "1.6em",
+            display: "block",
+            color: "white",
+            textAlign: "center",
+            marginBottom: "16px",
+            textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
+          }}
+          repeat={Infinity}
+        />
+      </div>
+
+      <section className="mt-12 container mx-auto px-6 text-center">
+        <h2 className="text-3xl font-bold text-blue-600 mb-4">Tentang Kami</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          Apotek Rahmi Farma telah beroperasi sejak 2000, melayani kebutuhan
+          kesehatan masyarakat dengan komitmen memberikan produk berkualitas
+          tinggi dan layanan konsultasi apoteker profesional. Kami berfokus pada
+          kenyamanan pelanggan, harga yang terjangkau, dan kualitas layanan
+          terbaik.
+        </p>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-2xl font-bold text-center text-blue-600 mb-4 drop-shadow-md">
+          Produk Terlaris
+        </h2>
+        <Marquee gradient={false} speed={60} className="flex space-x-6">
+          {products.map((product, index) => (
+            <div
+              key={index}
+              className="bg-white p-5 rounded-lg shadow-lg max-w-xs mx-3 border border-gray-200 hover:border-teal-400 hover:shadow-xl transition duration-300 transform hover:scale-105"
+            >
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={product.image}
+                  alt={`Produk ${index + 1}`}
+                  width={80}
+                  height={80}
+                  className="rounded-md hover:shadow-md hover:scale-110 transition duration-300"
+                />
+              </div>
+              <h3 className="font-semibold text-center text-blue-600 mb-2 text-sm">
+                {product.name}
+              </h3>
+              <p className="text-gray-700 text-xs">
+                Diskon: {product.discount || "-"}
+              </p>
+              <p className="mt-1 font-bold text-blue-600 text-sm">
+                Harga: {product.price}
+              </p>
+            </div>
+          ))}
+        </Marquee>
+      </section>
+
+      <section className="mt-10 container mx-auto px-6 text-center">
+        <h2 className="text-2xl font-bold text-blue-600 mb-4 drop-shadow-md">
+          Testimoni Pelanggan
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              name: "Maria, Pelanggan Setia",
+              text: "Apotek Rahmi Farma selalu memberikan pelayanan yang ramah dan obat yang berkualitas. Saya merasa puas dengan produk yang saya beli dan konsultasi yang diberikan.",
+              image: "/profil2.jpg",
+            },
+            {
+              name: "Joko, Pelanggan Loyal",
+              text: "Layanan yang cepat dan efektif, semua produk selalu tersedia dan harga yang sangat terjangkau!",
+              image: "/profil1.jpg",
+            },
+            {
+              name: "Lina, Pelanggan Setia",
+              text: "Apotek Rahmi Farma selalu memberikan pelayanan yang cepat dan obat yang berkualitas. Terima kasih atas bantuan konsultasinya.",
+              image: "/profil2.jpg",
+            },
+          ].map((testimonial, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:border-teal-400 transition duration-300 transform hover:scale-105"
+            >
+              <div className="flex justify-center mb-4">
+                <Image
+                  src={testimonial.image}
+                  alt={`Customer Testimonial ${index + 1}`}
+                  width={80}
+                  height={80}
+                  className="rounded-full object-cover shadow-lg"
+                />
+              </div>
+              <p className="text-gray-700 text-sm mb-4">{testimonial.text}</p>
+              <p className="font-semibold text-blue-600">{testimonial.name}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="w-full mt-10 flex gap-8 justify-center">
+        <a
+          href="https://www.instagram.com/apotekrahmifarma/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-pink-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <img src="/ig.png" alt="instagram" width={24} height={24} />
+            <p className="ml-3">Instagram</p>
+          </div>
+        </a>
+
+        <a
+          href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-white text-black flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <img src="/gmap.png" alt="google map" width={24} height={24} />
+            <p className="ml-3">Google Map</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/+6282279308219" target="_blank" rel="noreferrer">
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-green-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <img src="/wa.png" alt="whatsapp" width={24} height={24} />
+            <p className="ml-3">WhatsApp</p>
+          </div>
+        </a>
+      </div>
+
+      {/* Links to About Us and Products or Services */}
+      <div className="text-center mt-12">
+        <a
+          href="about"
+          className="text-blue-600 font-semibold hover:underline mr-6"
+        >
+          About Us
+        </a>
+        <a
+          href="products"
+          className="text-blue-600 font-semibold hover:underline"
+        >
+          Produk atau Layanan
+        </a>
       </div>
     </div>
   );

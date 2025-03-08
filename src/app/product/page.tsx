@@ -141,8 +141,8 @@ const categories = [
 
 export default function ProductList() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-6">
-      <h1 className="text-4xl font-bold text-center mt-5 text-blue-800 mb-6">
+    <div className="min-h-screen bg-gradient-to-b from-blue-400 to-white py-10 px-6">
+      <h1 className="text-4xl font-bold text-center mt-5 text-blue-800 mb-6 mt-8">
         Daftar Produk Obat
       </h1>
       <div className="max-w-6xl mx-auto">

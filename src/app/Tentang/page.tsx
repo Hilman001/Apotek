@@ -18,7 +18,7 @@ const paragraphVariant = {
 
 const OverviewTextWithImage = () => {
   return (
-    <div className="flex flex-col min-h-screen justify-between bg-gray-100">
+    <div className="flex flex-col min-h-screen justify-between bg-gradient-to-b from-blue-400 to-white">
       <div className="flex flex-col md:flex-row items-start max-w-4xl mx-auto p-6 mt-16">
         <div className="flex flex-col items-center">
           <motion.img

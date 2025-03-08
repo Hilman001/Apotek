@@ -21,7 +21,7 @@ const footerVariant = {
 
 const ContactUs = () => {
   return (
-    <div className="bg-blue-50 text-center py-12 px-6 mt-20">
+    <div className="bg-gradient-to-b from-blue-400 to-white text-center py-12 px-6 mt-20">
       <div className="flex flex-col items-center">
         <motion.div
           initial="hidden"

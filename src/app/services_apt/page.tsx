@@ -44,7 +44,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 py-12 px-8">
+    <div className="min-h-screen bg-gradient-to-b from-blue-400 to-white py-12 px-8">
       <motion.h1
         className="text-4xl font-extrabold text-center text-blue-600 mb-6 mt-6"
         initial={{ opacity: 0, y: -50 }}

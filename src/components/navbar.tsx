@@ -26,8 +26,8 @@ export default function Navbar() {
           <Image
             src="/apt.jpg"
             alt="Apotek Rahmi Farma Logo"
-            width={50}
-            height={30}
+            width={60}
+            height={50}
             className="object-contain"
           />
           <span className="text-sm font-semibold">Apotek Rahmi Farma</span>
