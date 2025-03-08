@@ -68,6 +68,12 @@ export default function Portfolio() {
       price: "Rp20.000",
       discount: "10%",
     },
+    {
+      name: "Itrabat",
+      image: "/itrabat.png",
+      price: "Rp20.000",
+      discount: "10%",
+    },
   ];
 
   return (
@@ -75,7 +81,7 @@ export default function Portfolio() {
      
       <div
         className="relative w-full h-screen bg-cover bg-center"
-        style={{ backgroundImage: 'url("/banner1.jpg")' }}
+        style={{ backgroundImage: 'url("/banner1.webp")' }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="relative container mx-auto px-6 py-12 top-8 text-center text-blue-500">
