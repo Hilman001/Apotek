@@ -7,7 +7,6 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { FaInstagram, FaMapMarkerAlt, FaWhatsapp } from 'react-icons/fa';
 
-
 export default function Portfolio() {
   const products = [
     {
@@ -78,12 +77,13 @@ export default function Portfolio() {
 
   return (
     <div className="relative min-h-screen overflow-hidden text-gray-900 bg-gradient-to-b from-blue-600 to-white">
-     
       <div
         className="relative w-full h-screen bg-cover bg-center"
         style={{ backgroundImage: 'url("/banner1.webp")' }}
+        role="banner"
+        aria-label="Apotek Rahmi Farma Banner"
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-black opacity-50" aria-hidden="true"></div>
         <div className="relative container mx-auto px-6 py-12 top-8 text-center text-blue-500">
           <h1 className="text-5xl font-extrabold mb-4 animate-pulse drop-shadow-lg ">
             Apotek Rahmi Farma
@@ -92,7 +92,7 @@ export default function Portfolio() {
             Tempat terbaik untuk kebutuhan kesehatan Anda dengan harga
             bersahabat dan layanan konsultasi apoteker!
           </p>
-         
+
           <div className="mt-10 max-w-[500px] mx-auto">
             <Carousel
               infiniteLoop
@@ -101,6 +101,7 @@ export default function Portfolio() {
               showStatus={false}
               interval={2000}
               className="rounded-lg"
+              aria-label="Carousel of Apotek Rahmi Farma"
             >
               <div>
                 <Image
@@ -114,7 +115,7 @@ export default function Portfolio() {
               <div>
                 <Image
                   src="/aptk.jpg" 
-                  alt="Apotek Rahmi Farma"
+                  alt="Apotek Rahmi Farma Interior"
                   width={300}
                   height={200}
                   className="w-full object-cover rounded-md"
@@ -123,7 +124,7 @@ export default function Portfolio() {
               <div>
                 <Image
                   src="/pharmacy.jpg" 
-                  alt="Apotek Rahmi Farma"
+                  alt="Pharmacy Products"
                   width={300}
                   height={200}
                   className="w-full object-cover rounded-md"
@@ -132,11 +133,13 @@ export default function Portfolio() {
             </Carousel>
 
             <a
-            href="product"
-            className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-400 transition transform hover:scale-105 shadow-lg font-semibold uppercase tracking-wider mt-6 block"
-          >
-            Lihat Produk
-          </a>
+              href="product"
+              className="bg-blue-700 text-white px-6 py-3 rounded-lg hover:bg-blue-400 transition transform hover:scale-105 shadow-lg font-semibold uppercase tracking-wider mt-6 block"
+              role="button"
+              aria-label="See our Products"
+            >
+              Lihat Produk
+            </a>
           </div>
         </div>
       </div>
@@ -189,11 +192,12 @@ export default function Portfolio() {
             <div
               key={index}
               className="bg-white p-5 rounded-lg shadow-lg max-w-xs mx-3 border border-gray-200 hover:border-teal-400 hover:shadow-xl transition duration-300 transform hover:scale-105"
+              role="listitem"
             >
               <div className="flex justify-center mb-4">
                 <Image
                   src={product.image}
-                  alt={`Produk ${index + 1}`}
+                  alt={`Produk ${product.name}`}
                   width={80}
                   height={80}
                   className="rounded-md hover:shadow-md hover:scale-110 transition duration-300"
@@ -218,7 +222,7 @@ export default function Portfolio() {
           Testimoni Pelanggan
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {[
+          {[ 
             {
               name: "Maria, Pelanggan Setia",
               text: "Apotek Rahmi Farma selalu memberikan pelayanan yang ramah dan obat yang berkualitas. Saya merasa puas dengan produk yang saya beli dan konsultasi yang diberikan.",
@@ -238,11 +242,13 @@ export default function Portfolio() {
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl hover:border-teal-400 transition duration-300 transform hover:scale-105"
+              role="region"
+              aria-labelledby={`testimonial-${index}`}
             >
               <div className="flex justify-center mb-4">
                 <Image
                   src={testimonial.image}
-                  alt={`Customer Testimonial ${index + 1}`}
+                  alt={`Testimonial ${testimonial.name}`}
                   width={80}
                   height={80}
                   className="rounded-full object-cover shadow-lg"
@@ -256,49 +262,35 @@ export default function Portfolio() {
       </section>
 
       <div className="w-full mt-10 flex gap-8 justify-center">
-  <a
-    href="https://www.instagram.com/apotekrahmifarma/"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <div className="py-3 px-6 rounded-2xl shadow-lg bg-pink-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-      <FaInstagram size={24} />
-      <p className="ml-3">Instagram</p>
-    </div>
-  </a>
-
-  <a
-    href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA"
-    target="_blank"
-    rel="noreferrer"
-  >
-    <div className="py-3 px-6 rounded-2xl shadow-lg bg-white text-black flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-      <FaMapMarkerAlt size={24} />
-      <p className="ml-3">Google Map</p>
-    </div>
-  </a>
-
-  <a href="https://wa.me/+6282279308219" target="_blank" rel="noreferrer">
-    <div className="py-3 px-6 rounded-2xl shadow-lg bg-green-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
-      <FaWhatsapp size={24} />
-      <p className="ml-3">WhatsApp</p>
-    </div>
-  </a>
-</div>
-
-      {/* Links to About Us and Products or Services */}
-      <div className="text-center mt-12">
         <a
-          href="about"
-          className="text-blue-600 font-semibold hover:underline mr-6"
+          href="https://www.instagram.com/apotekrahmifarma/"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Instagram"
         >
-          About Us
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-pink-500 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <FaInstagram size={24} />
+            <p className="ml-3">Instagram</p>
+          </div>
         </a>
+
         <a
-          href="products"
-          className="text-blue-600 font-semibold hover:underline"
+          href="https://www.google.com/maps/place/Apotek+RAHMI+FARMA"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Google Map"
         >
-          Produk atau Layanan
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-white text-black flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <FaMapMarkerAlt size={24} />
+            <p className="ml-3">Google Map</p>
+          </div>
+        </a>
+
+        <a href="https://wa.me/081234567890" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+          <div className="py-3 px-6 rounded-2xl shadow-lg bg-green-600 text-white flex items-center mb-5 hover:scale-110 transform transition-all duration-300">
+            <FaWhatsapp size={24} />
+            <p className="ml-3">WhatsApp</p>
+          </div>
         </a>
       </div>
     </div>
